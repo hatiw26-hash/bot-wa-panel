@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PANEL BALSKUYY</title>
+</head>
+<body>
+
+<h1>🔥 PANEL BOT BALSKUYY</h1>
+
+<h2>Users</h2>
+<ul id="users"></ul>
+
+<script>
+fetch("/api/users")
+.then(res => res.json())
+.then(data => {
+ let el = document.getElementById("users")
+ data.forEach(u => el.innerHTML += "<li>"+u+"</li>")
+})
+</script>
+
+</body>
+</html>
